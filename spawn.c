@@ -24,8 +24,7 @@ int main(int argc, char *argv[])
     }
 
     if (pid == 0){ //子プロセス
-       //execl(argv[1], argv[1], argv[2], NULL);
-       printf("Hello I am Child processes %d\n", pid);
+       execl(argv[1], argv[1], argv[2], NULL);
        //execl()が呼び出しから戻れば失敗
        perror(argv[1]);
        exit(99);
